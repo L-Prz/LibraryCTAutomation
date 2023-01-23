@@ -1,9 +1,12 @@
 package LibraryApp.pages;
 
 import LibraryApp.utilities.Driver;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.*;
 
 public abstract class BasePage {
     public BasePage(){
@@ -11,16 +14,16 @@ public abstract class BasePage {
     }
 
     @FindBy (xpath = "//span[@class='title'][.='Books']")
-    WebElement books;
+    public WebElement books;
 
     @FindBy (xpath = "//span[@class='title'][.='Borrowing Books']")
-    WebElement borrowingBooks;
+    public WebElement borrowingBooks;
 
     @FindBy(css="a#navbarDropdown")
-    WebElement navbarDropdown;
+    public WebElement navbarDropdown;
 
     @FindBy(xpath = "//a[@class='dropdown-item'][.='Log Out']")
-    WebElement logout;
+    public WebElement logout;
 
 
 
