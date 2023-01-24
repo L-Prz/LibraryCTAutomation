@@ -57,6 +57,17 @@ public class BrowserUtils {
     }
 
     /**
+     * WAIT FOR VISIBILITY OF
+     * This  method is useful in working with dynamically loaded elements on a webpage; It will wait for an element to become invisible.
+     * @param element : The webElement that needs to disappear.
+     */
+
+    public static void waitForVisibilityOf(WebElement element){
+        WebDriverWait wait=new WebDriverWait(Driver.getDriver(), 15);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    /**
      * DROPDOWN LIST OPTIONS AS A STRING
      * This method will accept a dropdown as a WebElement
      * and return all the options' text in a List of String

@@ -17,7 +17,7 @@ public class LoginPage extends BasePage{
     WebElement signInButton;
 
 public void uiLogin(String userType){
-    String email= ConfigurationReader.getProperty(userType+"_username");
+    String email= ConfigurationReader.getProperty(userType+"_email");
     String password= ConfigurationReader.getProperty(userType+"_password");
     emailInput.sendKeys(email);
     passwordInput.sendKeys(password);

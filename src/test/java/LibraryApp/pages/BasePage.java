@@ -13,7 +13,7 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//span[@class='title'][.='Books']")
+    @FindBy (xpath = "//a[@href='#books']")
     public WebElement books;
 
     @FindBy (xpath = "//span[@class='title'][.='Borrowing Books']")
