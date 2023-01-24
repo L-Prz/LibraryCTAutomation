@@ -17,3 +17,8 @@ Background:
       | start_date    |
       | end_date      |
       | address       |
+
+  Scenario: Verify each user has a unique ID.
+    When Execute query to get total count of user ids
+    And execute query to get count of unique user ids
+    Then verify the number of total user ids is equal to unique user ids
