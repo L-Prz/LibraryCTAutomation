@@ -3,6 +3,7 @@ package LibraryApp.steps.ui;
 import LibraryApp.pages.BooksPage;
 import LibraryApp.pages.LoginPage;
 import LibraryApp.utilities.BrowserUtils;
+import LibraryApp.utilities.ConfigurationReader;
 import LibraryApp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,6 +23,7 @@ public class US1_2_Student_Search_Book {
 
     @Given("student is logged into library app")
     public void student_is_logged_into_library_app() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         LoginPage login = new LoginPage();
         login.uiLogin("student");
     }
@@ -100,5 +102,23 @@ public class US1_2_Student_Search_Book {
 
         }
     }
+
+    @When("student enters an {string} not belonging to the library collection in the search bar")
+    public void student_enters_an_not_belonging_to_the_library_collection_in_the_search_bar(String author) {
+        booksPage.searchBar.sendKeys(author);
+        expectedAuthor = author;
+    }
+    @Then("the no author search results should be displayed")
+    public void the_no_author_search_results_should_be_displayed() {
+        BrowserUtils.sleep(5);//give browser time for results to be displayed
+
+        //determine number of results
+        List<WebElement> resultsRow =Driver.getDriver().findElements(By.xpath("//tbody/tr/td"));
+        Assertions.assertEquals(resultsRow.size(), 1);
+        String actualMessage=resultsRow.get(0).getText();
+        String expectedMessage="No data available in table";
+        Assertions.assertEquals(actualMessage, expectedMessage);
+    }
+
 
 }

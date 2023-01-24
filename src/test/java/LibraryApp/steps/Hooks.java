@@ -9,11 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
-    @Before
-    public void setupScenario(){
-        System.out.println("Setting up browser using cucumber @Before each scenario");
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-    }
+
 
     @After
     public void teardownScenario(Scenario scenario){
