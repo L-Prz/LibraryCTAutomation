@@ -28,6 +28,8 @@ public class BooksPage extends BasePage {
 @FindBy(css = "h2#borrowed_books")
 public WebElement borrowedBooks;
 
+
+
     public static Map<String, Object> bookTableCellValidationAsMap(int rowNum) {
         Map<String, Object> tableRowData = new HashMap<>();
         List<String> cellData = new ArrayList<>();
