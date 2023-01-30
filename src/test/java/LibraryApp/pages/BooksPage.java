@@ -25,7 +25,8 @@ public class BooksPage extends BasePage {
     public WebElement borrowBookButton;
     @FindBy(tagName = "h3")
     public WebElement pageTitle;
-
+@FindBy(css = "h2#borrowed_books")
+public WebElement borrowedBooks;
 
     public static Map<String, Object> bookTableCellValidationAsMap(int rowNum) {
         Map<String, Object> tableRowData = new HashMap<>();

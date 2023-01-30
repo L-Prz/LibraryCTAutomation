@@ -16,6 +16,9 @@ public abstract class BasePage {
     @FindBy (xpath = "//a[@href='#books']")
     public WebElement books;
 
+    @FindBy (xpath = "//a[@href='#dashboard']")
+    public WebElement dashboard;
+
     @FindBy (xpath = "//span[@class='title'][.='Borrowing Books']")
     public WebElement borrowingBooks;
 

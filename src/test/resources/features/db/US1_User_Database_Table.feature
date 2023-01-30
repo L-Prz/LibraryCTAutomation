@@ -1,4 +1,4 @@
-@db
+@db @db_us1
 Feature: Verify the User Table in the database is functioning as expectedly.
 Background:
   Given the database connection is established

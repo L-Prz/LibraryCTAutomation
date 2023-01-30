@@ -49,8 +49,8 @@ public class US1_User_Database_Table {
     }
     @When("execute query to get count of unique user ids")
     public void execute_query_to_get_count_of_unique_user_ids() {
-        String query="select count(distinct id) from users";
-        DB_Utils.runQuery(query);
+        // String query="select count(distinct id) from users";
+        DB_Utils.runQuery("select count(distinct id) from users");
         uniqueUserIDCount= DB_Utils.getFirstRowFirstColumn();
     }
     @Then("verify the number of total user ids is equal to unique user ids")
