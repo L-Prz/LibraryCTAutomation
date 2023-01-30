@@ -25,3 +25,28 @@ Feature: Books Page
       | Sherlock Holmes         |
       | The old man and the sea |
       | Wooden Fork             |
+
+
+  @search
+  Scenario Outline: As a student, I want to be able to search by author.
+    Given the student is on the Book Management page
+    When student enters an "<author>" belonging to the library collection in the search bar
+    Then the relevant author search results should be displayed
+
+    Examples:
+      | author           |
+      | J.K. Rowling     |
+      | Robert C. Martin |
+      | Billy Dering     |
+
+  @search
+  Scenario Outline: As a student, I don't want results for authors not in the collection.
+    Given the student is on the Book Management page
+    When student enters an "<author>" not belonging to the library collection in the search bar
+    Then the no author search results should be displayed
+
+    Examples:
+      | author          |
+      | Stephen King    |
+      | Mo Willems      |
+      | Joshua Weissman |
