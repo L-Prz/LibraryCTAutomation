@@ -28,7 +28,7 @@ BooksPage booksPage=new BooksPage();
         for(String eachCategory:bookCategories){
             System.out.println(eachCategory);
             select.selectByVisibleText(eachCategory);
-            booksPage.changeNumberOfResultsDropdown(booksPage.countResults()); //TODO: Fantasy column is failing.
+            booksPage.changeNumberOfResultsDropdown(booksPage.countResults());
             int tableLength= booksPage.countResults();
             if (booksPage.countResults()>500){
                 tableLength=500;

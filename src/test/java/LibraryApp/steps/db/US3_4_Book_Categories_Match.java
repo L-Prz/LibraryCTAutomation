@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class US3_Book_Categories_Match_In_UI_And_DB {
+public class US3_4_Book_Categories_Match {
     BooksPage booksPage = new BooksPage();
 
     List<String> expectedBookCategories;
@@ -44,5 +44,25 @@ expectedBookCategories.remove(0);
         Assertions.assertEquals(expectedBookCategories, actualBookCategories);
     }
 
+
+    //-------------------------US4--------------------------------------------
+
+
+    @Then("the total books in each category should match the database")
+    public void the_total_books_in_each_category_should_match_the_database() {
+
+        Select select=new Select(booksPage.bookCategoryDropdown);
+        for(String eachCategory:expectedBookCategories){
+            System.out.println(eachCategory);
+            select.selectByVisibleText(eachCategory);
+            int expectedCountResults= booksPage.countResults();
+            System.out.println("expectedCountResults = " + expectedCountResults);
+            DB_Utils.runQuery("select count(id) from books where book_category_id=(select id from book_categories where name like '"+eachCategory+"')");
+            int actualCountResults= Integer.parseInt(DB_Utils.getFirstRowFirstColumn());
+            System.out.println("actualCountResults = " + actualCountResults);
+            Assertions.assertEquals(expectedCountResults, actualCountResults);
+            }
+
+    }
 
 }

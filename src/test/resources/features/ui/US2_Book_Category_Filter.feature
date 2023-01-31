@@ -1,4 +1,4 @@
-@ui @ui_us2 @wip
+@ui @ui_us2
   Feature: As a user, I want to filter Book results by category.
 
     Scenario Outline: When a book category is selected from the dropdown, the results table should only display relevant results.
