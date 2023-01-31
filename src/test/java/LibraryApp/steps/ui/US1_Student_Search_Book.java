@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class US1_2_Student_Search_Book {
+public class US1_Student_Search_Book {
     BooksPage booksPage = new BooksPage();
     String expectedBookTitle;
     String expectedAuthor;

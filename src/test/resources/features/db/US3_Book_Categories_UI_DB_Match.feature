@@ -1,4 +1,4 @@
-@db @db_us3 @wip
+@db @db_us3
 Feature: As a data consumer, I want the book categories in the UI to match those in the DB.
 
   Scenario Outline:

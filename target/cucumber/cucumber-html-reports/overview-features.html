@@ -50,8 +50,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                10,
-                0,
+                7,
+                1,
                 0,
                 0,
                 0
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
-                0
+                1,
+                1
             ],
             backgroundColor: [
                 "#00B000",
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   1,
-                   0
+                   0,
+                   1
                ],
                backgroundColor: [
                 "#00B000",
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>30 Jan 2023, 14:10</td>
+      <td>31 Jan 2023, 15:07</td>
     </tr>
   </tbody>
 </table>
@@ -323,54 +323,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_2532264994.html">As a data consumer, I want the book categories in the UI to match those in the DB.</a></td>
+        <td class="tagname"><a href="report-feature_3988078876.html">As a user, I want to filter Book results by category.</a></td>
 
-        <td      class="passed"    >10</td>
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">10</td>
+        <td class="total">8</td>
 
-        <td  class="passed"    >2</td>
-        <td >0</td>
+        <td  class="passed"    >1</td>
+        <td  class="failed"    >1</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="18396957800">18.396</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="123371227400">2:3.371</td>
+        <td class="failed">Failed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>10</td>
+      <td>7</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>10</td>
+      <td>8</td>
 
-      <td>2</td>
-      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
 
-      <td class="duration">18.396</td>
+      <td class="duration">2:3.371</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
+      <td>87.50%</td>
+      <td>12.50%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
+      <td>50.00%</td>
+      <td>50.00%</td>
+      <td></td>
+      <td></td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
-      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>
