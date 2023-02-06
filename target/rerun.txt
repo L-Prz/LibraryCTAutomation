@@ -1,3 +1,0 @@
-file:src/test/resources/features/db/US4_Book_Categories_Results_Count_Match_DB_UI.feature:18:19
-file:src/test/resources/features/db/US2_Librarian_Borrowed_Books_Number.feature:8
-file:src/test/resources/features/db/US3_Book_Categories_UI_DB_Match.feature:13:14
