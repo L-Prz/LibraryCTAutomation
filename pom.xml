@@ -97,6 +97,12 @@
         </dependency>
 
 
+        <!--JavaFaker: To be used to generate user accounts and book entries-->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
