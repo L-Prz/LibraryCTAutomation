@@ -96,6 +96,13 @@
             <version>7.3.0</version>
         </dependency>
 
+        <!--For deseririlization/serilization we need to add ObjectMapper like Jackson or GSON-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+
 
         <!--JavaFaker: To be used to generate user accounts and book entries-->
         <dependency>

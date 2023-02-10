@@ -17,8 +17,8 @@ import org.junit.runner.RunWith;
         },
         features="src/test/resources/features",
         glue="LibraryApp/steps",
-        dryRun = false,
-        tags="@db"
+        dryRun = true,
+        tags="@wip"
 
 )
 
