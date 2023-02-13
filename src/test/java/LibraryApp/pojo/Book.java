@@ -1,5 +1,10 @@
 package LibraryApp.pojo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+@JsonIgnoreProperties(value="id", allowSetters = true)//used to specify write-only properties; ones that should not be serialized out, but that may be provided in the deserilization.
 public class Book {
     private String name;
     private String isbn;
@@ -7,6 +12,8 @@ public class Book {
     private String author;
     private int book_category_id;
     private String description;
+
+    private int bookId;
 
     public String getName() {
         return name;
@@ -56,6 +63,14 @@ public class Book {
         this.description = description;
     }
 
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
     @Override
     public String toString(){
         return "Book{"+
@@ -65,6 +80,20 @@ public class Book {
                 "author: "+author+"\n" +
                 "book category id: "+book_category_id+"\n" +
                 "description: "+ description;
+    }
+
+    public Map<String, String> getBookAsMap(){
+        Map<String, String> mappedBook=new LinkedHashMap<>();
+        mappedBook.put("id", String.valueOf(bookId));
+        mappedBook.put("name", name);
+        mappedBook.put("isbn", isbn);
+        mappedBook.put("year", String.valueOf(year));
+        mappedBook.put("author", author);
+        mappedBook.put("book_category_id", String.valueOf(book_category_id));
+        mappedBook.put("description", description);
+
+        return mappedBook;
+
     }
 }
 
